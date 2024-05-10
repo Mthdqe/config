@@ -32,6 +32,7 @@ cd ~
 cp ~/config/zshrc ~/.zshrc
 
 # Kitty
+mkdir ~/.config/kitty
 cp ~/config/kitty.conf ~/.config/kitty/
 
 # Vim
