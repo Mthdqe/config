@@ -6,7 +6,13 @@ cd ~
 
 # ============================= INSTALLATION ================================= #
 # Apt
-sudo apt install "$APT_PKGS"
+sudo apt install i3 \
+    vim     \
+    kitty   \
+    git     \
+    feh     \
+    curl    \
+    zsh     \
 
 # Clone config repo
 git clone git@github.com:Mthdqe/config.git
