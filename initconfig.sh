@@ -4,7 +4,7 @@ cd ~
 
 # ============================= INSTALLATION ================================= #
 # Apt
-sudo apt install i3 vim kitty git feh curl zsh
+sudo apt install i3 vim kitty git feh curl zsh batcat
 
 # Clone config repo
 git clone git@github.com:Mthdqe/config.git
@@ -20,13 +20,15 @@ git config --global core.editor "vim"
 cp ~/config/i3/config ~/.config/i3/
 
 # Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 cd ~/.oh-my-zsh/plugins
 
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
 
 cd ~
+
+cp ~/config/zshrc ~/.zshrc
 
 # Kitty
 cp ~/config/kitty.conf ~/.config/kitty/
