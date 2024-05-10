@@ -17,6 +17,7 @@ cp ~/config/gojo.jpg ~/Pictures/gojo.jpg
 git config --global core.editor "vim"
 
 # i3
+mkdir ~/.config/i3
 cp ~/config/i3/config ~/.config/i3/
 
 # Zsh
