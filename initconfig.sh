@@ -1,18 +1,10 @@
 #!/bin/sh
 
-APT_PKGS="i3 vim kitty git feh curl zsh"
-
 cd ~
 
 # ============================= INSTALLATION ================================= #
 # Apt
-sudo apt install i3 \
-    vim     \
-    kitty   \
-    git     \
-    feh     \
-    curl    \
-    zsh     \
+sudo apt install i3 vim kitty git feh curl zsh
 
 # Clone config repo
 git clone git@github.com:Mthdqe/config.git
