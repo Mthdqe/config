@@ -24,7 +24,7 @@ RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/
 
 cd ~/.oh-my-zsh/plugins
 
-git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting
 
 cd ~
 
