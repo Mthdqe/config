@@ -4,7 +4,7 @@ cd ~
 
 # ============================= INSTALLATION ================================= #
 # Apt
-sudo apt install i3 vim kitty git feh curl zsh batcat
+sudo apt install i3 vim kitty git feh curl zsh bat
 
 # Clone config repo
 git clone git@github.com:Mthdqe/config.git
