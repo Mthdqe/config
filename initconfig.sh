@@ -38,7 +38,8 @@ mkdir -p ~/.vim/colors
 cp ~/config/vimrc ~/.vimrc
 cp ~/config/monokai.vim ~/.vim/colors/
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vimcd ~
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 vim +'PlugInstall --sync' +qa
 
