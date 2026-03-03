@@ -1,0 +1,24 @@
+[colors.primary]
+background = '#0D1117'
+foreground = '#D6D6D6'
+
+[colors.cursor]
+text = '#000000'
+cursor = '#FFFFFF'
+
+[colors.normal]
+black = '#0D1117'
+red = '#FA7970'
+green = '#7CE38B'
+yellow = '#FAA356'
+blue = '#FAA356'
+magenta = '#CEA5FB'
+cyan = '#77BDFB'
+white = '#C6CDD6'
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[font]
+normal = { family = 'JetBrainsMonoNerdFont', style = 'Regular' }
+size=10
