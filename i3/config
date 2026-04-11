@@ -45,7 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -196,10 +196,31 @@ bar {
         }
 }
 
-# Custom
-exec_always --no-startup-id feh --bg-fill ~/Pictures/gojo.jpg
+# CUSTOM ======================================================================
 
-exec_always  --no-startup-id xrandr --output Virtual1 --mode 1920x1080
+# Custom variables
+# alt key
+set $alt Mod1
+# background picture path
+set $background ~/Pictures/arcane.png
+
+# Shortcuts
+# flameshot shortcut
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+# i3lock shortcut
+bindsym $mod+$alt+l exec --no-startup-id i3lock -i $background -t
+
+# Displays
+#exec_always --no-startup-id xrandr --output HDMI-1 --auto --above eDP-1 --output eDP-1 --mode 1920x1200
+
+# Zowie no mouse accel
+#exec_always --no-startup-id ~/scripts/zowie_no_accel
+
+# i3 bar strays
+#exec --no-startup-id volumeicon
+
+# Background picture
+exec_always --no-startup-id feh --bg-scale $background
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #000000 #000000 #ffffff #000000   #000000

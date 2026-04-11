@@ -57,8 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PROMPT_COMMAND='PS1_GIT=$(__git_ps1 " on \033[01;36m%s")'
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u\[\033[00m\] in \[\033[01;32m\]\w\[\033[00m\]${PS1_GIT}\[\033[01;34m\] 󰘧 \[\033[00m\]'
+    PROMPT_COMMAND='PS1_GIT=$(__git_ps1 "\[\033[00m\] on \[\033[01;36m\]%s")'
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u\[\033[00m\] in \[\033[01;32m\]\w${PS1_GIT}\[\033[01;34m\] 󰘧 \[\033[00m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u\[\033[00m\] in \[\033[01;32m\]\w\[\033[01;34m\] 󰘧 \[\033[00m\]'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -122,15 +123,13 @@ fi
 
 # Aliases
 alias bat="batcat"
+alias curljson='curl -H "Content-Type: application/json" -d @-'
 alias vim=nvim
 alias gst="git status"
 
 # Path
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/home/mthdqe/go/bin"
+export PATH="$PATH:/home/mthdqe/scripts"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-# Node version manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

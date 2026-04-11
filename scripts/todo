@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+DOC=~/Documents/todo_list.md
+OPERATION="VIEW"
+
+if [ "$#" -eq 2 ] && [ "$1" = "add" ]; then
+    OPERATION="ADD"
+elif [ "$#" -eq 1 ] && [ "$1" = "edit" ]; then
+    OPERATION="EDIT"
+fi
+
+case "$OPERATION" in
+    "VIEW") glow -p "$DOC"
+       exit 0
+       ;;
+    "ADD") echo "- [ ] $2" >> "$DOC"
+       exit 0
+       ;;
+    "EDIT") nvim "$DOC"
+       exit 0
+       ;;
+esac
+

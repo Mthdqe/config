@@ -1,0 +1,6 @@
+#!/bin/sh
+
+DEV_ID=$(xinput --list | grep "BenQ ZOWIE" | grep -o "id=[0-9]*" | grep -o "[0-9]*" )
+PROP_ID=$(xinput --list-props "$DEV_ID" | grep "Accel Profile Enabled (" | grep -o "([0-9]*)" | grep -o "[0-9]*")
+
+xinput set-prop $DEV_ID $PROP_ID 0 0 0
